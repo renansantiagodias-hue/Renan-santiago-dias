@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renan Santiago Dias | Autobiografia</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts (Inter + Montserrat) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            blue: '#1e40af',
+                            cyan: '#0284c7',
+                            emerald: '#059669',
+                            amber: '#d97706',
+                            dark: '#0f172a'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(135deg, #3b82f6 0%, #10b981 50%, #f59e0b 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-bg {
+            background: radial-gradient(circle at top right, rgba(30, 64, 175, 0.15), transparent 40%),
+                        radial-gradient(circle at bottom left, rgba(16, 185, 129, 0.15), transparent 40%),
+                        #0f172a;
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-blue-500 selection:text-white">
+
+    <!-- Header / Navegação -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <a href="#inicio" class="flex items-center gap-2 font-heading font-extrabold text-xl tracking-wider text-white">
+                    <i data-lucide="compass" class="w-6 h-6 text-blue-500"></i>
+                    <span>RENAN<span class="text-blue-500">.SD</span></span>
+                </a>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex space-x-8 text-sm font-medium">
+                    <a href="#inicio" class="hover:text-blue-400 transition-colors">Início</a>
+                    <a href="#sobre" class="hover:text-blue-400 transition-colors">Sobre Mim</a>
+                    <a href="#hobbies" class="hover:text-blue-400 transition-colors">Hobbies & Rotina</a>
+                    <a href="#games" class="hover:text-blue-400 transition-colors">Mundo Gamer</a>
+                    <a href="#sonhos" class="hover:text-blue-400 transition-colors">Sonhos & Futuro</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 focus:outline-none">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-b border-slate-800 px-4 pt-2 pb-4 space-y-2">
+            <a href="#inicio" class="block py-2 px-3 rounded-md text-base font-medium hover:bg-slate-800">Início</a>
+            <a href="#sobre" class="block py-2 px-3 rounded-md text-base font-medium hover:bg-slate-800">Sobre Mim</a>
+            <a href="#hobbies" class="block py-2 px-3 rounded-md text-base font-medium hover:bg-slate-800">Hobbies & Rotina</a>
+            <a href="#games" class="block py-2 px-3 rounded-md text-base font-medium hover:bg-slate-800">Mundo Gamer</a>
+            <a href="#sonhos" class="block py-2 px-3 rounded-md text-base font-medium hover:bg-slate-800">Sonhos & Futuro</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-bg min-h-screen flex items-center justify-center pt-24 pb-16 px-4">
+        <div class="max-w-4xl mx-auto text-center space-y-8">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-800/80 border border-slate-700 text-blue-400 text-sm font-semibold tracking-wide uppercase">
+                <i data-lucide="sparkles" class="w-4 h-4"></i> Bem-vindo ao meu espaço
+            </div>
+            
+            <h1 class="font-heading text-4xl sm:text-6xl lg:text-7xl font-black tracking-tight leading-tight">
+                Olá, eu sou <br>
+                <span class="gradient-text">Renan Santiago Dias</span>
+            </h1>
+
+            <p class="text-slate-300 text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed">
+                Tenho 16 anos, sou apaixonado por esportes, pé na estrada, bons momentos em família no sítio do meu avô e grandes aventuras no mundo dos games.
+            </p>
+
+            <div class="flex flex-wrap justify-center gap-4 pt-4">
+                <a href="#sobre" class="px-6 py-3 rounded-xl bg-blue-600 hover:bg-blue-500 font-semibold text-white shadow-lg shadow-blue-600/30 transition-all flex items-center gap-2">
+                    Conhecer Minha História <i data-lucide="arrow-down" class="w-4 h-4"></i>
+                </a>
+                <a href="#sonhos" class="px-6 py-3 rounded-xl bg-slate-800 hover:bg-slate-700 font-semibold text-slate-200 border border-slate-700 transition-all flex items-center gap-2">
+                    Meus Sonhos <i data-lucide="truck" class="w-4 h-4"></i>
+                </a>
+            </div>
+
+            <!-- Destaques Rápidos -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 pt-12 border-t border-slate-800/60 max-w-3xl mx-auto">
+                <div class="p-3 rounded-lg bg-slate-900/50 border border-slate-800">
+                    <p class="text-2xl font-bold text-blue-400">16 Anos</p>
+                    <p class="text-xs text-slate-400">Idade</p>
+                </div>
+                <div class="p-3 rounded-lg bg-slate-900/50 border border-slate-800">
+                    <p class="text-2xl font-bold text-emerald-400">Pescaria</p>
+                    <p class="text-xs text-slate-400">Sítio Vô Zé Paulino</p>
+                </div>
+                <div class="p-3 rounded-lg bg-slate-900/50 border border-slate-800">
+                    <p class="text-2xl font-bold text-amber-400">Gamer</p>
+                    <p class="text-xs text-slate-400">Minecraft / GTA / Futebol</p>
+                </div>
+                <div class="p-3 rounded-lg bg-slate-900/50 border border-slate-800">
+                    <p class="text-2xl font-bold text-purple-400">Futuro</p>
+                    <p class="text-xs text-slate-400">Caminhoneiro & Viagens</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Mim -->
+    <section id="sobre" class="py-20 bg-slate-900">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center space-y-4 mb-16">
+                <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-white">Sobre Mim</h2>
+                <div class="w-20 h-1 bg-blue-500 mx-auto rounded-full"></div>
+                <p class="text-slate-400 max-w-xl mx-auto">Um resumo da minha vida, valores e o que me faz feliz todos os dias.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6 text-slate-300 leading-relaxed">
+                    <h3 class="font-heading text-2xl font-bold text-white">Prazer, Renan!</h3>
+                    <p>
+                        Atualmente tenho 16 anos de idade e sou uma pessoa que valoriza muito a liberdade, as amizades e, acima de tudo, os laços familiares.
+                    </p>
+                    <p>
+                        Para mim, o final de semana perfeito é aquele em que posso me movimentar ao ar livre: seja jogando uma partida de futebol com a galera, pedalando de bicicleta pelas ruas ou descansando no sítio.
+                    </p>
+                    <p>
+                        Amo criar memórias com as pessoas que gosto, aproveitar uma boa comida caseira e sonhar alto sobre os lugares do mundo que ainda vou conhecer dirigindo ou viajando.
+                    </p>
+                </div>
+
+                <!-- Card Interativo de Raízes -->
+                <div class="bg-slate-950 p-8 rounded-2xl border border-slate-800 relative overflow-hidden shadow-xl">
+                    <div class="absolute -right-10 -bottom-10 w-40 h-40 bg-blue-600/10 rounded-full blur-2xl"></div>
+                    <h4 class="font-heading text-xl font-bold text-white mb-6 flex items-center gap-3">
+                        <i data-lucide="heart" class="text-red-500"></i> Minhas Raízes & Família
+                    </h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-4">
+                            <div class="p-2 rounded-lg bg-emerald-950/80 text-emerald-400 border border-emerald-800/50 mt-1">
+                                <i data-lucide="trees" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold text-white">Sítio do Vô Zé Paulino</h5>
+                                <p class="text-sm text-slate-400">Um dos meus lugares favoritos no mundo para relaxar, pescar e recarregar as energias.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="p-2 rounded-lg bg-amber-950/80 text-amber-400 border border-amber-800/50 mt-1">
+                                <i data-lucide="utensils" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold text-white">Almoço na Casa dos Avós</h5>
+                                <p class="text-sm text-slate-400">Nada supera o tempero especial e a união da família ao redor da mesa.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="p-2 rounded-lg bg-blue-950/80 text-blue-400 border border-blue-800/50 mt-1">
+                                <i data-lucide="home" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h5 class="font-semibold text-white">Visita às Tias</h5>
+                                <p class="text-sm text-slate-400">Final de semana também é sinônimo de passar na casa das minhas tias para resenhar e curtir.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hobbies e Rotina -->
+    <section id="hobbies" class="py-20 bg-slate-950">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center space-y-4 mb-16">
+                <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-white">Hobbies & Rotina</h2>
+                <div class="w-20 h-1 bg-emerald-500 mx-auto rounded-full"></div>
+                <p class="text-slate-400 max-w-xl mx-auto">O que movimento meus finais de semana e me mantém sempre ativo.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1: Futebol -->
+                <div class="bg-slate-900 p-6 rounded-2xl border border-slate-800 card-hover flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/20 text-blue-400 flex items-center justify-center mb-6">
+                            <i data-lucide="trophy" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-heading text-xl font-bold text-white mb-3">Futebol no Fim de Semana</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Bater aquela bola nos finais de semana é sagrado. É o momento de competir, dar risada com a galera e gastar energia em campo.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-800 text-xs text-blue-400 font-semibold tracking-wide uppercase">
+                        Esporte & Paixão
+                    </div>
+                </div>
+
+                <!-- Card 2: Pescaria -->
+                <div class="bg-slate-900 p-6 rounded-2xl border border-slate-800 card-hover flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center mb-6">
+                            <i data-lucide="fish" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-heading text-xl font-bold text-white mb-3">Pescaria no Sítio</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Pegar a vara de pesca e ir para a beira da água no sítio do Vô Zé Paulino. Tranquilidade, contato com a natureza e boas histórias.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-800 text-xs text-emerald-400 font-semibold tracking-wide uppercase">
+                        Natureza & Lazer
+                    </div>
+                </div>
+
+                <!-- Card 3: Bike -->
+                <div class="bg-slate-900 p-6 rounded-2xl border border-slate-800 card-hover flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center mb-6">
+                            <i data-lucide="bike" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="font-heading text-xl font-bold text-white mb-3">Pedalar com Amigos</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Andar de bicicleta com a turma, explorar novos caminhos e curtir o rolê. A melhor forma de aproveitar o tempo livre com os brothers.
+                        </p>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-800 text-xs text-amber-400 font-semibold tracking-wide uppercase">
+                        Liberdade & Amizade
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mundo Gamer -->
+    <section id="games" class="py-20 bg-slate-900 relative overflow-hidden">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center space-y-4 mb-16">
+                <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-white">Mundo Gamer</h2>
+                <div class="w-20 h-1 bg-purple-500 mx-auto rounded-full"></div>
+                <p class="text-slate-400 max-w-xl mx-auto">Quando estou no PC ou console, estes são os jogos que mais curto jogar online.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Game 1: Minecraft -->
+                <div class="bg-slate-950 rounded-2xl border border-slate-800 overflow-hidden card-hover">
+                    <div class="h-40 bg-gradient-to-r from-emerald-600 to-green-800 flex items-center justify-center p-6 text-white">
+                        <i data-lucide="box" class="w-16 h-16 opacity-80"></i>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                            Sandbox / Construção
+                        </span>
+                        <h3 class="font-heading text-xl font-bold text-white mt-4 mb-2">Minecraft</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Curto de todos os tipos! Seja sobrevivência, construção de casas, projetos complexos ou jogando em servidores com a galera.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Game 2: GTA -->
+                <div class="bg-slate-950 rounded-2xl border border-slate-800 overflow-hidden card-hover">
+                    <div class="h-40 bg-gradient-to-r from-purple-600 to-indigo-800 flex items-center justify-center p-6 text-white">
+                        <i data-lucide="gamepad-2" class="w-16 h-16 opacity-80"></i>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/20">
+                            Mundo Aberto / Ação
+                        </span>
+                        <h3 class="font-heading text-xl font-bold text-white mt-4 mb-2">Franquia GTA</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Fã de carteirinha de todos os tipos de GTA. A liberdade de explorar o mapa, dirigir carros incríveis e cumprir missões.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Game 3: Futebol -->
+                <div class="bg-slate-950 rounded-2xl border border-slate-800 overflow-hidden card-hover">
+                    <div class="h-40 bg-gradient-to-r from-blue-600 to-cyan-800 flex items-center justify-center p-6 text-white">
+                        <i data-lucide="circle-dot" class="w-16 h-16 opacity-80"></i>
+                    </div>
+                    <div class="p-6">
+                        <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20">
+                            Simulação / Esporte
+                        </span>
+                        <h3 class="font-heading text-xl font-bold text-white mt-4 mb-2">Jogos de Futebol</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            A paixão dos gramados reais levada para as telas! Nada como disputar campeonatos online e mandar aquele gol de placa no jogo.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sonhos e Futuro -->
+    <section id="sonhos" class="py-20 bg-slate-950">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center space-y-4 mb-16">
+                <h2 class="font-heading text-3xl sm:text-4xl font-extrabold text-white">Sonhos & Futuro</h2>
+                <div class="w-20 h-1 bg-amber-500 mx-auto rounded-full"></div>
+                <p class="text-slate-400 max-w-xl mx-auto">Para onde quero ir e o que quero conquistar nos próximos anos.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Sonho 1: Carreira de Caminhoneiro -->
+                <div class="bg-gradient-to-br from-slate-900 to-slate-900/90 p-8 rounded-2xl border border-amber-500/30 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-6 text-amber-500/10">
+                        <i data-lucide="truck" class="w-32 h-32"></i>
+                    </div>
+                    <div class="relative z-10 space-y-4">
+                        <div class="inline-flex p-3 rounded-xl bg-amber-500/10 text-amber-400 border border-amber-500/20">
+                            <i data-lucide="truck" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="font-heading text-2xl font-bold text-white">Ser Caminhoneiro Profissional</h3>
+                        <p class="text-slate-300 leading-relaxed">
+                            Tenho uma vontade enorme e um sonho claro de me tornar caminhoneiro. Viver a rotina da estrada, cruzar o país, comandar uma máquina pesada e sentir o motor roncar é algo que me fascina desde novo.
+                        </p>
+                        <div class="pt-4 flex items-center gap-2 text-amber-400 font-medium text-sm">
+                            <i data-lucide="map-pin" class="w-4 h-4"></i> Pé na estrada & vida sobre rodas
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sonho 2: Viagens Internacionais -->
+                <div class="bg-gradient-to-br from-slate-900 to-slate-900/90 p-8 rounded-2xl border border-blue-500/30 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-6 text-blue-500/10">
+                        <i data-lucide="plane" class="w-32 h-32"></i>
+                    </div>
+                    <div class="relative z-10 space-y-4">
+                        <div class="inline-flex p-3 rounded-xl bg-blue-500/10 text-blue-400 border border-blue-500/20">
+                            <i data-lucide="plane-takeoff" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="font-heading text-2xl font-bold text-white">Viagens Pelo Mundo</h3>
+                        <p class="text-slate-300 leading-relaxed">
+                            Além de rodar pelo Brasil, tenho muita vontade de fazer viagens internacionais. Conhecer novos países, culturas e paisagens incríveis pelo globo.
+                        </p>
+                        
+                        <div class="pt-2 grid grid-cols-2 gap-3">
+                            <div class="p-3 rounded-lg bg-slate-950 border border-slate-800 flex items-center gap-3">
+                                <span class="text-xl">🇺🇸</span>
+                                <div>
+                                    <p class="text-xs text-slate-400">Destino Sonhado</p>
+                                    <p class="text-sm font-bold text-white">Estados Unidos</p>
+                                </div>
+                            </div>
+                            <div class="p-3 rounded-lg bg-slate-950 border border-slate-800 flex items-center gap-3">
+                                <span class="text-xl">🇮🇹</span>
+                                <div>
+                                    <p class="text-xs text-slate-400">Destino Sonhado</p>
+                                    <p class="text-sm font-bold text-white">Itália</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé -->
+    <footer class="bg-slate-950 border-t border-slate-800 py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
+            <div class="flex justify-center items-center gap-2 font-heading font-extrabold text-xl tracking-wider text-white">
+                <i data-lucide="compass" class="w-6 h-6 text-blue-500"></i>
+                <span>RENAN SANTIAGO DIAS</span>
+            </div>
+            
+            <p class="text-slate-400 text-sm max-w-md mx-auto">
+                "Aproveitando o presente com a família e amigos, enquanto construo o caminho para os grandes sonhos do futuro."
+            </p>
+
+            <div class="flex justify-center space-x-6 text-slate-400">
+                <span class="hover:text-blue-400 transition-colors flex items-center gap-1 text-xs">
+                    <i data-lucide="shield-check" class="w-4 h-4"></i> Autobiografia Oficial
+                </span>
+                <span class="hover:text-blue-400 transition-colors flex items-center gap-1 text-xs">
+                    <i data-lucide="calendar" class="w-4 h-4"></i> 16 Anos
+                </span>
+            </div>
+
+            <p class="text-xs text-slate-400">
+                &copy; <script>document.write(new Date().getFullYear())</script> Renan Santiago Dias. Todos os direitos reservados.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Script de Inicialização dos Ícones e Menu Mobile -->
+    <script>
+        // Inicializa ícones Lucide
+        lucide.createIcons();
+
+        // Lógica do Menu Mobile
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Fechar menu ao clicar em um link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
